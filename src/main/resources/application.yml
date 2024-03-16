@@ -1,0 +1,44 @@
+name: abc
+name2: apple
+
+#对象
+person:
+  name: ${name2}
+  other_properties: 20
+
+#数组
+address:
+  - beijing
+  - shanghai
+
+spring:
+#  redis:
+#    database: 0
+#    host: 127.0.0.1
+#    port: 6379
+#    lettuce:
+#      pool:
+#        max-idle: 8
+#        min-idle: 0
+#        max-active: 8
+#        max-wait: -1ms
+#    timeout: 5000
+#  session:
+#    store-type: redis
+
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/graduation_project?characterEncoding=utf8&useSSL=false&allowPublicKeyRetrieval=true
+    username: root
+    password: 123456
+
+  servlet:
+    multipart:
+      max-file-size: 10000MB
+      max-request-size: 10000MB
+
+server:
+  port: 8082
+  max-http-header-size: 81920
+
